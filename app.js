@@ -58,14 +58,15 @@ function speakText( text, library ) {
     if (library == 1) {
     responsiveVoice.speak( text, 'Brazilian Portuguese Female', {rate:1.2});
     }
-    else
-    if ('speechSynthesis' in window) {
-        let utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'pt-BR'; 
-        SpeechSynthesisVoice
-        window.speechSynthesis.speak(utterance); 
-    } else {
-        console.log("Web Speech API não suportada neste navegador.");
+    else {
+        if ('speechSynthesis' in window) {
+            let utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'pt-BR'; 
+            SpeechSynthesisVoice
+            window.speechSynthesis.speak(utterance); 
+        } else {
+            console.log("Web Speech API não suportada neste navegador.");
+        }
     }
 }
 
