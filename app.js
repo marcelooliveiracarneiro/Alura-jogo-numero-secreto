@@ -3,7 +3,7 @@ let numeroSecreto = 0;
 let numeroTentativas = 0;
 let numeroMaximo = 4;
 
-novoJogo();
+novoJogo(); 
 
 function novoJogo() {
     numeroSecreto = gerarNumeroAleatorio();
