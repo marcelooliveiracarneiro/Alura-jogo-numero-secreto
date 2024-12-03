@@ -9,7 +9,7 @@ function novoJogo() {
     numeroSecreto = gerarNumeroAleatorio();
     numeroTentativas = 0;
     
-    setSelectorInnerHTML('h1', 'Jogo do número secreto');
+    setSelectorInnerHTML('h1', 'Jogo do número secreto'); 
     setSelectorInnerHTML('p', 'Escolha um número entre 1 e 10');
     document.getElementById('reiniciar').setAttribute('disabled',true);
     limparCampo();
@@ -50,13 +50,12 @@ function limparCampo() {
 function setSelectorInnerHTML(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    
-    speakText( texto, 1 ); 
+    speakText( texto, 2 ); 
 }
 
 function speakText( text, library ) {
     if (library == 1) {
-    responsiveVoice.speak( text, 'Brazilian Portuguese Female', {rate:1.2});
+        responsiveVoice.speak( text, 'Brazilian Portuguese Female', {rate:1.2});
     }
     else {
         if ('speechSynthesis' in window) {
