@@ -3,7 +3,6 @@ let numeroSecreto = 0;
 let numeroTentativas = 0;
 let numeroMaximo = 4;
 
-document.getElementById('reiniciar').click();
 novoJogo();
 
 function novoJogo() {
