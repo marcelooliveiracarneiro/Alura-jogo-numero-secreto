@@ -54,10 +54,12 @@ function setSelectorInnerHTML(tag, texto) {
 }
 
 function speakText( text, library ) {
+/*    
     if (library == 1) {
         responsiveVoice.speak( text, 'Brazilian Portuguese Female', {rate:1.2});
     }
     else {
+*/        
         if ('speechSynthesis' in window) {
             let utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = 'pt-BR'; 
@@ -66,7 +68,7 @@ function speakText( text, library ) {
         } else {
             console.log("Web Speech API não suportada neste navegador.");
         }
-    }
+//    }
 }
 
 
